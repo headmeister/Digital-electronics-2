@@ -3,29 +3,29 @@ blink.elf:     file format elf32-avr
 
 Sections:
 Idx Name          Size      VMA       LMA       File off  Algn
-  0 .data         00000000  00800100  00800100  000002a2  2**0
+  0 .data         00000000  00800100  00800100  00000290  2**0
                   CONTENTS, ALLOC, LOAD, DATA
-  1 .text         0000024e  00000000  00000000  00000054  2**1
+  1 .text         0000023c  00000000  00000000  00000054  2**1
                   CONTENTS, ALLOC, LOAD, READONLY, CODE
-  2 .comment      00000030  00000000  00000000  000002a2  2**0
+  2 .comment      00000030  00000000  00000000  00000290  2**0
                   CONTENTS, READONLY
-  3 .note.gnu.avr.deviceinfo 00000040  00000000  00000000  000002d4  2**2
+  3 .note.gnu.avr.deviceinfo 00000040  00000000  00000000  000002c0  2**2
                   CONTENTS, READONLY
-  4 .debug_aranges 00000020  00000000  00000000  00000314  2**0
+  4 .debug_aranges 00000020  00000000  00000000  00000300  2**0
                   CONTENTS, READONLY, DEBUGGING
-  5 .debug_info   00000b01  00000000  00000000  00000334  2**0
+  5 .debug_info   00000ac8  00000000  00000000  00000320  2**0
                   CONTENTS, READONLY, DEBUGGING
-  6 .debug_abbrev 0000068a  00000000  00000000  00000e35  2**0
+  6 .debug_abbrev 0000068a  00000000  00000000  00000de8  2**0
                   CONTENTS, READONLY, DEBUGGING
-  7 .debug_line   000003fb  00000000  00000000  000014bf  2**0
+  7 .debug_line   000003df  00000000  00000000  00001472  2**0
                   CONTENTS, READONLY, DEBUGGING
-  8 .debug_frame  00000024  00000000  00000000  000018bc  2**2
+  8 .debug_frame  00000024  00000000  00000000  00001854  2**2
                   CONTENTS, READONLY, DEBUGGING
-  9 .debug_str    0000039a  00000000  00000000  000018e0  2**0
+  9 .debug_str    0000039a  00000000  00000000  00001878  2**0
                   CONTENTS, READONLY, DEBUGGING
- 10 .debug_loc    00000510  00000000  00000000  00001c7a  2**0
+ 10 .debug_loc    000004c8  00000000  00000000  00001c12  2**0
                   CONTENTS, READONLY, DEBUGGING
- 11 .debug_ranges 00000010  00000000  00000000  0000218a  2**0
+ 11 .debug_ranges 00000010  00000000  00000000  000020da  2**0
                   CONTENTS, READONLY, DEBUGGING
 
 Disassembly of section .text:
@@ -66,7 +66,7 @@ Disassembly of section .text:
   70:	de bf       	out	0x3e, r29	; 62
   72:	cd bf       	out	0x3d, r28	; 61
   74:	0e 94 40 00 	call	0x80	; 0x80 <main>
-  78:	0c 94 25 01 	jmp	0x24a	; 0x24a <_exit>
+  78:	0c 94 1c 01 	jmp	0x238	; 0x238 <_exit>
 
 0000007c <__bad_interrupt>:
   7c:	0c 94 00 00 	jmp	0	; 0x0 <__vectors>
@@ -342,27 +342,18 @@ int main(void)
  220:	98 27       	eor	r25, r24
  222:	95 b9       	out	0x05, r25	; 5
  224:	2f ef       	ldi	r18, 0xFF	; 255
- 226:	33 ec       	ldi	r19, 0xC3	; 195
- 228:	99 e0       	ldi	r25, 0x09	; 9
+ 226:	3b e4       	ldi	r19, 0x4B	; 75
+ 228:	9d e1       	ldi	r25, 0x1D	; 29
  22a:	21 50       	subi	r18, 0x01	; 1
  22c:	30 40       	sbci	r19, 0x00	; 0
  22e:	90 40       	sbci	r25, 0x00	; 0
  230:	e1 f7       	brne	.-8      	; 0x22a <main+0x1aa>
  232:	00 c0       	rjmp	.+0      	; 0x234 <main+0x1b4>
  234:	00 00       	nop
- 236:	2f ef       	ldi	r18, 0xFF	; 255
- 238:	37 ea       	ldi	r19, 0xA7	; 167
- 23a:	91 e6       	ldi	r25, 0x61	; 97
- 23c:	21 50       	subi	r18, 0x01	; 1
- 23e:	30 40       	sbci	r19, 0x00	; 0
- 240:	90 40       	sbci	r25, 0x00	; 0
- 242:	e1 f7       	brne	.-8      	; 0x23c <main+0x1bc>
- 244:	00 c0       	rjmp	.+0      	; 0x246 <main+0x1c6>
- 246:	00 00       	nop
- 248:	1e cf       	rjmp	.-452    	; 0x86 <main+0x6>
+ 236:	27 cf       	rjmp	.-434    	; 0x86 <main+0x6>
 
-0000024a <_exit>:
- 24a:	f8 94       	cli
+00000238 <_exit>:
+ 238:	f8 94       	cli
 
-0000024c <__stop_program>:
- 24c:	ff cf       	rjmp	.-2      	; 0x24c <__stop_program>
+0000023a <__stop_program>:
+ 23a:	ff cf       	rjmp	.-2      	; 0x23a <__stop_program>

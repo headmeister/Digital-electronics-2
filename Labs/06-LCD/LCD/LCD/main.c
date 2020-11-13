@@ -81,6 +81,16 @@ int main(void)
 	};
 
 
+	uint8_t pacman[8] = {
+		0b00000,
+		0b01110,
+		0b11111,
+		0b11010,
+		0b11100,
+		0b11110,
+		0b01111,
+		0b00000
+	};
 
 
 
@@ -113,7 +123,12 @@ int main(void)
 		// Store all new chars to memory line by line
 		lcd_data(five_bar[i]);
 	}
-
+	
+	for (uint8_t i = 0; i < 8; i++)
+	{
+		// Store all new chars to memory line by line
+		lcd_data(pacman[i]);
+	}
 
 
 	// Set DDRAM address
@@ -136,7 +151,7 @@ int main(void)
 	lcd_putc('b');
 
 	lcd_gotoxy(11, 1);
-	lcd_putc('c');
+	lcd_putc(5);
 
 	// Configure 8-bit Timer/Counter2 for Stopwatch
 	// Set prescaler and enable overflow interrupt every 16 ms
@@ -248,7 +263,6 @@ ISR(TIMER0_OVF_vect)
 	static uint8_t ovf = 0;
 	static uint8_t symbol = 0;
 	static uint8_t position = 0;
-
 	static uint8_t ovf2 = 1;
 
 	ovf++;
@@ -265,9 +279,6 @@ ISR(TIMER0_OVF_vect)
 			position++;
 		}
 	}
-
-
-
 
 	if (position > 9 || ovf >= 60) // if last position or overflow (to compensate for rounding) 
 	{

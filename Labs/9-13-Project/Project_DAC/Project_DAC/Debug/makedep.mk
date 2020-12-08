@@ -4,6 +4,8 @@
 
 gpio.c
 
+lcd.c
+
 main.c
 
 Sig_gen.c

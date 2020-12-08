@@ -7,7 +7,7 @@
 #include <avr/io.h>			// include IO operation setting
 #include <math.h>			// Include math library for signal generation
 
-void generate_signal(uint8_t *frame_buffer, uint8_t type, uint16_t freq,float tim_set)
+void generate_signal(uint8_t* frame_buffer, uint8_t type, uint16_t freq,float tim_set)
 {
 	
 	
@@ -77,7 +77,7 @@ void generate_signal(uint8_t *frame_buffer, uint8_t type, uint16_t freq,float ti
 		break;
 	}
 	
-	return frame_buffer-arr_length;
+	
 	
 	
 }

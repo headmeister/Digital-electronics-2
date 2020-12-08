@@ -15,4 +15,4 @@
 
 #endif /* SIG_GEN_H_ */
 
-void generate_signal(uint8_t *frame_buffer,uint8_t type, uint16_t freq,float tim_set);
+void generate_signal(uint8_t* frame_buffer,uint8_t type, uint16_t freq,float tim_set);

@@ -1,32 +1,7 @@
 #ifndef TIMER_H
 #define TIMER_H
 
-/***********************************************************************
- * 
- * Timer library for AVR-GCC.
- * ATmega328P (Arduino Uno), 16 MHz, AVR 8-bit Toolchain 3.6.2
- *
- * Copyright (c) 2019-2020 Tomas Fryza
- * Dept. of Radio Electronics, Brno University of Technology, Czechia
- * This work is licensed under the terms of the MIT license.
- *
- **********************************************************************/
 
-/**
- * @file  timer.h
- * @brief Timer library for AVR-GCC.
- *
- * @details
- * The library contains macros for controlling the timer modules.
- *
- * @note
- * Based on Microchip Atmel ATmega328P manual and no source file is 
- * needed for the library.
- * 
- * @copyright (c) 2019-2020 Tomas Fryza
- * Dept. of Radio Electronics, Brno University of Technology, Czechia
- * This work is licensed under the terms of the MIT license.
- */
 
 /* Includes ----------------------------------------------------------*/
 #include <avr/io.h>

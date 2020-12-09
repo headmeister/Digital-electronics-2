@@ -1,0 +1,68 @@
+{
+	"Name": "rekon",
+	"Description": "rekon",
+	"Tool": "FW",
+	"Version": "1.1",
+	"Design": {
+		"visitedTabs": [
+			"filter-type",
+			"specifications",
+			"components",
+			"tolerances"
+		],
+		"filterType": "lowPass",
+		"specifications": {
+			"gain": 0,
+			"gainUnit": "dB",
+			"passbandAttenuation": -3,
+			"passbandFrequency": 10000,
+			"stopbandAttenuation": -40,
+			"stopbandFrequency": 32000,
+			"filterResponseValue": 0.98,
+			"filterResponseSlider": "55",
+			"centerFrequency": null
+		},
+		"components": {
+			"vsPlus": 5,
+			"vsMinus": -5,
+			"optimization": "Power",
+			"optimizationPreference": "nonSpecific",
+			"compensateForGbw": false,
+			"stages": [
+				{
+					"stageLetter": "B",
+					"componentSizing": 72,
+					"gain": 164,
+					"gainEnabled": false,
+					"implementation": "sallenKey",
+					"opAmps": "ADA4096-2"
+				},
+				{
+					"stageLetter": "A",
+					"componentSizing": 72,
+					"gain": 164,
+					"gainEnabled": false,
+					"implementation": "sallenKey",
+					"opAmps": "ADA4096-2"
+				}
+			],
+			"recommendedAmps": [],
+			"sortOrder": [
+				0,
+				1
+			]
+		},
+		"tolerances": {
+			"resistorTolerance": "1%",
+			"capacitorTolerance": "5%",
+			"inductorTolerance": "5%",
+			"opAmpGbwTolerance": "20%",
+			"resistorPreferredSeries": "E96",
+			"capacitorPreferredSeries": "E24",
+			"inductorPreferredSeries": "E12"
+		},
+		"nextSteps": {}
+	},
+	"CreatedDate": "2020-12-09 01:07:14 AM",
+	"UpdatedDate": "2020-12-09 01:07:14 AM"
+}

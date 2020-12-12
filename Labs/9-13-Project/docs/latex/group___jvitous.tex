@@ -1,0 +1,145 @@
+\hypertarget{group___jvitous}{}\doxysection{D\+AC Library $<$Sig\+\_\+gen.\+h$>$}
+\label{group___jvitous}\index{DAC Library $<$Sig\_gen.h$>$@{DAC Library $<$Sig\_gen.h$>$}}
+
+
+Generate signal based on entered type frequency and other parameters.  
+
+
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{group___jvitous_ga706c0d7e62f6280d2b05b465fbb4ffa9}{generate\+\_\+signal}} (uint8\+\_\+t $\ast$frame\+\_\+buffer, uint8\+\_\+t type, uint16\+\_\+t freq, float tim\+\_\+set, uint8\+\_\+t multiplier)
+\begin{DoxyCompactList}\small\item\em Signal Buffer filling function. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___jvitous_ga279309a268e8bff6454be77c4a708d42}{update\+\_\+disp}} (uint8\+\_\+t type, uint16\+\_\+t frequency, uint8\+\_\+t multiplier)
+\begin{DoxyCompactList}\small\item\em Display updating function. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___jvitous_gaa26acaa5bf50c8e6b7b84748967864cb}{send\+\_\+uart}} (uint8\+\_\+t type, uint16\+\_\+t frequency)
+\begin{DoxyCompactList}\small\item\em U\+A\+RT send current state function. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___jvitous_ga22f6aba74fe8e4295eaeab47494e749e}{return\+\_\+wvftype}} (char text\mbox{[}$\,$\mbox{]}, uint8\+\_\+t type)
+\begin{DoxyCompactList}\small\item\em Return generated function name function. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Generate signal based on entered type frequency and other parameters. 
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{preprocessor}{\#include <\mbox{\hyperlink{_sig__gen_8h}{Sig\_gen.h}}>} }
+\end{DoxyCode}
+
+
+This library generates signals from L\+U\+Ts or using formulas. The available waveforms are\+: Sine, positive ramp, negative ramp, triangle, square, E\+CG or D\+T\+MF with parameter. The framebuffer is filled with corresponding data which can then be output to the output P\+O\+R\+TX. The default output precision is of data type uint8\+\_\+t ~\newline
+
+
+\begin{DoxyNote}{Note}
+Uses Peter Fleurys libraries for L\+CD and U\+A\+RT communication 
+\end{DoxyNote}
+\begin{DoxyAuthor}{Author}
+Jiri Vitous 
+\end{DoxyAuthor}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{group___jvitous_ga706c0d7e62f6280d2b05b465fbb4ffa9}\label{group___jvitous_ga706c0d7e62f6280d2b05b465fbb4ffa9}} 
+\index{DAC Library $<$Sig\_gen.h$>$@{DAC Library $<$Sig\_gen.h$>$}!generate\_signal@{generate\_signal}}
+\index{generate\_signal@{generate\_signal}!DAC Library $<$Sig\_gen.h$>$@{DAC Library $<$Sig\_gen.h$>$}}
+\doxysubsubsection{\texorpdfstring{generate\_signal()}{generate\_signal()}}
+{\footnotesize\ttfamily void generate\+\_\+signal (\begin{DoxyParamCaption}\item[{uint8\+\_\+t $\ast$}]{frame\+\_\+buffer,  }\item[{uint8\+\_\+t}]{type,  }\item[{uint16\+\_\+t}]{freq,  }\item[{float}]{tim\+\_\+set,  }\item[{uint8\+\_\+t}]{multiplier }\end{DoxyParamCaption})}
+
+
+
+Signal Buffer filling function. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em frame\+\_\+buffer} & Pointer to frame buffer vector \\
+\hline
+{\em type} & button pressed (later decoded by type\+\_\+map) \\
+\hline
+{\em freq} & frequency of output signal in Hz should be in range 100-\/2000 Hz for default setting \\
+\hline
+{\em tim\+\_\+set} & Timer set ovf period, to calculate active frame buffer size \\
+\hline
+{\em multiplier} & Extra parameter for D\+T\+MF describes the ratio of two generated sine waves \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}
+
+
+Definition at line 107 of file Sig\+\_\+gen.\+c.
+
+\mbox{\Hypertarget{group___jvitous_ga22f6aba74fe8e4295eaeab47494e749e}\label{group___jvitous_ga22f6aba74fe8e4295eaeab47494e749e}} 
+\index{DAC Library $<$Sig\_gen.h$>$@{DAC Library $<$Sig\_gen.h$>$}!return\_wvftype@{return\_wvftype}}
+\index{return\_wvftype@{return\_wvftype}!DAC Library $<$Sig\_gen.h$>$@{DAC Library $<$Sig\_gen.h$>$}}
+\doxysubsubsection{\texorpdfstring{return\_wvftype()}{return\_wvftype()}}
+{\footnotesize\ttfamily void return\+\_\+wvftype (\begin{DoxyParamCaption}\item[{char}]{text\mbox{[}$\,$\mbox{]},  }\item[{uint8\+\_\+t}]{type }\end{DoxyParamCaption})}
+
+
+
+Return generated function name function. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em text} & empty char array where to store the wvf. name \\
+\hline
+{\em type} & button pressed \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}
+
+
+Definition at line 255 of file Sig\+\_\+gen.\+c.
+
+\mbox{\Hypertarget{group___jvitous_gaa26acaa5bf50c8e6b7b84748967864cb}\label{group___jvitous_gaa26acaa5bf50c8e6b7b84748967864cb}} 
+\index{DAC Library $<$Sig\_gen.h$>$@{DAC Library $<$Sig\_gen.h$>$}!send\_uart@{send\_uart}}
+\index{send\_uart@{send\_uart}!DAC Library $<$Sig\_gen.h$>$@{DAC Library $<$Sig\_gen.h$>$}}
+\doxysubsubsection{\texorpdfstring{send\_uart()}{send\_uart()}}
+{\footnotesize\ttfamily void send\+\_\+uart (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{type,  }\item[{uint16\+\_\+t}]{frequency }\end{DoxyParamCaption})}
+
+
+
+U\+A\+RT send current state function. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em type} & Button pressed \\
+\hline
+{\em frequency} & Frequency of output signal in Hz should be in range 100-\/2000 Hz for default setting \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}
+
+
+Definition at line 240 of file Sig\+\_\+gen.\+c.
+
+\mbox{\Hypertarget{group___jvitous_ga279309a268e8bff6454be77c4a708d42}\label{group___jvitous_ga279309a268e8bff6454be77c4a708d42}} 
+\index{DAC Library $<$Sig\_gen.h$>$@{DAC Library $<$Sig\_gen.h$>$}!update\_disp@{update\_disp}}
+\index{update\_disp@{update\_disp}!DAC Library $<$Sig\_gen.h$>$@{DAC Library $<$Sig\_gen.h$>$}}
+\doxysubsubsection{\texorpdfstring{update\_disp()}{update\_disp()}}
+{\footnotesize\ttfamily void update\+\_\+disp (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{type,  }\item[{uint16\+\_\+t}]{frequency,  }\item[{uint8\+\_\+t}]{multiplier }\end{DoxyParamCaption})}
+
+
+
+Display updating function. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em type} & Button pressed \\
+\hline
+{\em frequency} & Frequency of output signal in Hz should be in range 100-\/2000 Hz for default setting \\
+\hline
+{\em multiplier} & Extra parameter for D\+T\+MF describes the ratio of two generated sine waves \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}
+
+
+Definition at line 309 of file Sig\+\_\+gen.\+c.
+

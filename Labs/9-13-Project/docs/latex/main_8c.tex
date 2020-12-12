@@ -1,0 +1,75 @@
+\hypertarget{main_8c}{}\doxysection{main.\+c File Reference}
+\label{main_8c}\index{main.c@{main.c}}
+{\ttfamily \#include $<$avr/io.\+h$>$}\newline
+{\ttfamily \#include $<$avr/interrupt.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}timer.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Sig\+\_\+gen.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}lcd.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include $<$string.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}uart.\+h\char`\"{}}\newline
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{main_8c_a43bafb28b29491ec7f871319b5a3b2f8}{F\+\_\+\+C\+PU}}~16000000
+\begin{DoxyCompactList}\small\item\em F\+\_\+\+C\+PU. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{group___jvitou__main_ga6720b53a0933baf0ba25f938d8c06354}{decode\+\_\+button}} ()
+\begin{DoxyCompactList}\small\item\em Decodes the selected button from butt variable. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___jvitou__main_gac7a391d62b96ecc337089ad83dbf6377}{change\+\_\+size}} ()
+\begin{DoxyCompactList}\small\item\em Changes the size of an array appropriatel to period, can switch timer ovf period if required (if the period does not fit within the interval, not used currently) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{main_8c_a840291bc02cba5474a4cb46a9b9566fe}\label{main_8c_a840291bc02cba5474a4cb46a9b9566fe}} 
+int {\bfseries main} (void)
+\item 
+\mbox{\Hypertarget{main_8c_add2d7cdddfb682dcc0391e60cf42c7d6}\label{main_8c_add2d7cdddfb682dcc0391e60cf42c7d6}} 
+\mbox{\hyperlink{main_8c_add2d7cdddfb682dcc0391e60cf42c7d6}{I\+SR}} (T\+I\+M\+E\+R0\+\_\+\+O\+V\+F\+\_\+vect)
+\begin{DoxyCompactList}\small\item\em Frame buffer update timer (main sampling clock generator) moves in frame buffer. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{main_8c_a7cfcbe42bd266750aeb6e5d71e5ea479}\label{main_8c_a7cfcbe42bd266750aeb6e5d71e5ea479}} 
+{\bfseries I\+SR} (T\+I\+M\+E\+R2\+\_\+\+O\+V\+F\+\_\+vect)
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{main_8c_a4bc51f9633d3e3d5dcfa76f8a301e489}\label{main_8c_a4bc51f9633d3e3d5dcfa76f8a301e489}} 
+uint8\+\_\+t {\bfseries frame\+\_\+buffer} \mbox{[}1000\mbox{]}
+\item 
+\mbox{\Hypertarget{main_8c_affea3cd1644a21783d6bd68ad665eb37}\label{main_8c_affea3cd1644a21783d6bd68ad665eb37}} 
+volatile uint16\+\_\+t {\bfseries frequency} = 161
+\item 
+\mbox{\Hypertarget{main_8c_a3fd685e63865948bcad8278d207bdb65}\label{main_8c_a3fd685e63865948bcad8278d207bdb65}} 
+volatile uint8\+\_\+t {\bfseries multiplier} =1
+\item 
+\mbox{\Hypertarget{main_8c_a69e7c8ac354ef605315d11be1c9c6bbb}\label{main_8c_a69e7c8ac354ef605315d11be1c9c6bbb}} 
+uint16\+\_\+t {\bfseries butt} = 0
+\item 
+\mbox{\Hypertarget{main_8c_a5111a4429e3c5a0f33a1224a1ebecd8d}\label{main_8c_a5111a4429e3c5a0f33a1224a1ebecd8d}} 
+uint16\+\_\+t {\bfseries arr\+\_\+size} = 0
+\item 
+\mbox{\Hypertarget{main_8c_acb6e6cb5dee08b52e9c04dc5bda1b87e}\label{main_8c_acb6e6cb5dee08b52e9c04dc5bda1b87e}} 
+float {\bfseries tim\+\_\+set} = 16e-\/6
+\item 
+\mbox{\Hypertarget{main_8c_a203fa1080b527dc2168a01c1a735bf41}\label{main_8c_a203fa1080b527dc2168a01c1a735bf41}} 
+const float {\bfseries timer\+\_\+values} \mbox{[}$\,$\mbox{]} = \{ 16e-\/6,128e-\/6,1e-\/3 \}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{main_8c_a43bafb28b29491ec7f871319b5a3b2f8}\label{main_8c_a43bafb28b29491ec7f871319b5a3b2f8}} 
+\index{main.c@{main.c}!F\_CPU@{F\_CPU}}
+\index{F\_CPU@{F\_CPU}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{F\_CPU}{F\_CPU}}
+{\footnotesize\ttfamily \#define F\+\_\+\+C\+PU~16000000}
+
+
+
+F\+\_\+\+C\+PU. 
+
+\begin{DoxyWarning}{Warning}
+Should Correspod with C\+PU frequency 
+\end{DoxyWarning}
+
+
+Definition at line 32 of file main.\+c.
+

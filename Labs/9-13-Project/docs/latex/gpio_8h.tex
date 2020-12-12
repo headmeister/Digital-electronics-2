@@ -1,0 +1,64 @@
+\hypertarget{gpio_8h}{}\doxysection{D\+:/\+F\+E\+K\+T-\/\+B\+E\+S\+T/\+D\+E2/\+Digital-\/electronics-\/2/\+Labs/9-\/13-\/\+Project/\+Project\+\_\+\+D\+A\+C/\+Project\+\_\+\+D\+A\+C/gpio.h File Reference}
+\label{gpio_8h}\index{D:/FEKT-\/BEST/DE2/Digital-\/electronics-\/2/Labs/9-\/13-\/Project/Project\_DAC/Project\_DAC/gpio.h@{D:/FEKT-\/BEST/DE2/Digital-\/electronics-\/2/Labs/9-\/13-\/Project/Project\_DAC/Project\_DAC/gpio.h}}
+
+
+G\+P\+IO library for A\+V\+R-\/\+G\+CC.  
+
+
+{\ttfamily \#include $<$avr/io.\+h$>$}\newline
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{gpio_8h_aea5357ef2716c0bb9889b092e5877589}{G\+P\+I\+O\+\_\+config\+\_\+output}} (volatile uint8\+\_\+t $\ast$reg\+\_\+name, uint8\+\_\+t pin\+\_\+num)
+\begin{DoxyCompactList}\small\item\em Configure one output pin in Data Direction Register. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{gpio_8h_a939ef6c419d27c29f0b4bf23d4cbab1b}\label{gpio_8h_a939ef6c419d27c29f0b4bf23d4cbab1b}} 
+void {\bfseries G\+P\+I\+O\+\_\+config\+\_\+input\+\_\+nopull} (volatile uint8\+\_\+t $\ast$reg\+\_\+name, uint8\+\_\+t pin\+\_\+num)
+\item 
+\mbox{\Hypertarget{gpio_8h_af973893e5f4c00cd24ce70eb57a5310a}\label{gpio_8h_af973893e5f4c00cd24ce70eb57a5310a}} 
+void {\bfseries G\+P\+I\+O\+\_\+config\+\_\+input\+\_\+pullup} (volatile uint8\+\_\+t $\ast$reg\+\_\+name, uint8\+\_\+t pin\+\_\+num)
+\item 
+\mbox{\Hypertarget{gpio_8h_aa52123f00ace3e1f172d3daa7089a8f5}\label{gpio_8h_aa52123f00ace3e1f172d3daa7089a8f5}} 
+void {\bfseries G\+P\+I\+O\+\_\+write\+\_\+low} (volatile uint8\+\_\+t $\ast$reg\+\_\+name, uint8\+\_\+t pin\+\_\+num)
+\item 
+\mbox{\Hypertarget{gpio_8h_a02ac59d8305bc637a91eae64966e7ab3}\label{gpio_8h_a02ac59d8305bc637a91eae64966e7ab3}} 
+void {\bfseries G\+P\+I\+O\+\_\+write\+\_\+high} (volatile uint8\+\_\+t $\ast$reg\+\_\+name, uint8\+\_\+t pin\+\_\+num)
+\item 
+\mbox{\Hypertarget{gpio_8h_a5fae8d81d3a1deefeb6d5344561505f6}\label{gpio_8h_a5fae8d81d3a1deefeb6d5344561505f6}} 
+void {\bfseries G\+P\+I\+O\+\_\+toggle} (volatile uint8\+\_\+t $\ast$reg\+\_\+name, uint8\+\_\+t pin\+\_\+num)
+\item 
+\mbox{\Hypertarget{gpio_8h_acfaad70b52775f53bd2d9e29c00ec85d}\label{gpio_8h_acfaad70b52775f53bd2d9e29c00ec85d}} 
+uint8\+\_\+t {\bfseries G\+P\+I\+O\+\_\+read} (volatile uint8\+\_\+t $\ast$reg\+\_\+name, uint8\+\_\+t pin\+\_\+num)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+G\+P\+IO library for A\+V\+R-\/\+G\+CC. 
+
+The library contains functions for controlling A\+V\+Rs\textquotesingle{} gpio pin(s).
+
+\begin{DoxyNote}{Note}
+Based on A\+VR Libc Reference Manual. Tested on A\+Tmega328P (Arduino Uno), 16 M\+Hz, A\+VR 8-\/bit Toolchain 3.\+6.\+2.
+\end{DoxyNote}
+\begin{DoxyCopyright}{Copyright}
+(c) 2019-\/2020 Tomas Fryza Dept. of Radio Electronics, Brno University of Technology, Czechia This work is licensed under the terms of the M\+IT license. 
+\end{DoxyCopyright}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{gpio_8h_aea5357ef2716c0bb9889b092e5877589}\label{gpio_8h_aea5357ef2716c0bb9889b092e5877589}} 
+\index{gpio.h@{gpio.h}!GPIO\_config\_output@{GPIO\_config\_output}}
+\index{GPIO\_config\_output@{GPIO\_config\_output}!gpio.h@{gpio.h}}
+\doxysubsubsection{\texorpdfstring{GPIO\_config\_output()}{GPIO\_config\_output()}}
+{\footnotesize\ttfamily void G\+P\+I\+O\+\_\+config\+\_\+output (\begin{DoxyParamCaption}\item[{volatile uint8\+\_\+t $\ast$}]{reg\+\_\+name,  }\item[{uint8\+\_\+t}]{pin\+\_\+num }\end{DoxyParamCaption})}
+
+
+
+Configure one output pin in Data Direction Register. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em reg\+\_\+name} & -\/ Address of Data Direction Register, such as \&D\+D\+RA, \&D\+D\+RB, ... \\
+\hline
+{\em pin\+\_\+num} & -\/ Pin designation in the interval 0 to 7 \\
+\hline
+\end{DoxyParams}

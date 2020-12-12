@@ -6,8 +6,28 @@
 */
 
 /**
-* @ brief F_CPU
-* @ warning Should Correspod with CPU frequency
+ * @mainpage
+ * DAC for project in Digital Electronics 2, using Peter Fleurys libraries for LCD and UART communication.
+ * @author Jiri Vitous
+ * 
+ *
+ *  @file
+ *  @defgroup Jvitou_main Main file <main.c>
+ * 
+ *
+ *  @brief	DAC signal generating, using AVR MCu and R2R DAC with output on 16x2 LCD and UART
+ *
+ *	This project uses simple R2R DAC to generate some usefull waveforms in frequency range from 100 Hz to 2kHz. It uses two main timers, first to sample the output signal and second to
+ *	check pressed buttons and update signal parameters and display them onto LCD or send throught UART.
+ 
+ *  @note Uses Peter Fleurys libraries for LCD and UART communication
+ *  @author Jiri Vitous 
+ */
+
+
+/**
+* @brief F_CPU
+* @warning Should Correspod with CPU frequency
 */
 #define  F_CPU 16000000
 
@@ -22,6 +42,11 @@
 #include <string.h>
 #include "uart.h"
 
+/**@{*/
+
+	/*
+	** Functions
+	*/
 
 
 /** @brief  Decodes the selected button from butt variable
@@ -33,6 +58,9 @@ void decode_button();
 /** @brief  Changes the size of an array appropriatel to period, can switch timer ovf period if required (if the period does not fit within the interval, not used currently)
 */
 void change_size();
+
+/**@}*/
+
 
 uint8_t frame_buffer[1000];								//create frame buffer for outputting waveforms
 

@@ -1,0 +1,82 @@
+\@ifundefined {etoctocstyle}{\let \etoc@startlocaltoc \@gobble \let \etoc@settocdepth \@gobble \let \etoc@depthtag \@gobble \let \etoc@setlocaltop \@gobble }{}
+\contentsline {chapter}{\numberline {1}Main Page}{1}{chapter.1}%
+\contentsline {chapter}{\numberline {2}Module Index}{3}{chapter.2}%
+\contentsline {section}{\numberline {2.1}Modules}{3}{section.2.1}%
+\contentsline {chapter}{\numberline {3}File Index}{5}{chapter.3}%
+\contentsline {section}{\numberline {3.1}File List}{5}{section.3.1}%
+\contentsline {chapter}{\numberline {4}Module Documentation}{7}{chapter.4}%
+\contentsline {section}{\numberline {4.1}L\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}CD library $<$lcd.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h$>$}{7}{section.4.1}%
+\contentsline {subsection}{\numberline {4.1.1}Detailed Description}{10}{subsection.4.1.1}%
+\contentsline {subsection}{\numberline {4.1.2}Macro Definition Documentation}{10}{subsection.4.1.2}%
+\contentsline {subsubsection}{\numberline {4.1.2.1}LCD\_CONTROLLER\_KS0073}{10}{subsubsection.4.1.2.1}%
+\contentsline {subsubsection}{\numberline {4.1.2.2}LCD\_DATA0\_PORT}{11}{subsubsection.4.1.2.2}%
+\contentsline {subsubsection}{\numberline {4.1.2.3}LCD\_DATA1\_PORT}{11}{subsubsection.4.1.2.3}%
+\contentsline {subsubsection}{\numberline {4.1.2.4}LCD\_DATA2\_PORT}{11}{subsubsection.4.1.2.4}%
+\contentsline {subsubsection}{\numberline {4.1.2.5}LCD\_DATA3\_PORT}{11}{subsubsection.4.1.2.5}%
+\contentsline {subsubsection}{\numberline {4.1.2.6}LCD\_DELAY\_BOOTUP}{11}{subsubsection.4.1.2.6}%
+\contentsline {subsubsection}{\numberline {4.1.2.7}LCD\_DELAY\_BUSY\_FLAG}{12}{subsubsection.4.1.2.7}%
+\contentsline {subsubsection}{\numberline {4.1.2.8}LCD\_DELAY\_ENABLE\_PULSE}{12}{subsubsection.4.1.2.8}%
+\contentsline {subsubsection}{\numberline {4.1.2.9}LCD\_DELAY\_INIT}{12}{subsubsection.4.1.2.9}%
+\contentsline {subsubsection}{\numberline {4.1.2.10}LCD\_DELAY\_INIT\_4BIT}{12}{subsubsection.4.1.2.10}%
+\contentsline {subsubsection}{\numberline {4.1.2.11}LCD\_DELAY\_INIT\_REP}{12}{subsubsection.4.1.2.11}%
+\contentsline {subsubsection}{\numberline {4.1.2.12}LCD\_DISP\_LENGTH}{13}{subsubsection.4.1.2.12}%
+\contentsline {subsubsection}{\numberline {4.1.2.13}LCD\_IO\_MODE}{13}{subsubsection.4.1.2.13}%
+\contentsline {subsubsection}{\numberline {4.1.2.14}LCD\_LINE\_LENGTH}{13}{subsubsection.4.1.2.14}%
+\contentsline {subsubsection}{\numberline {4.1.2.15}LCD\_LINES}{13}{subsubsection.4.1.2.15}%
+\contentsline {subsubsection}{\numberline {4.1.2.16}LCD\_RW\_PIN}{13}{subsubsection.4.1.2.16}%
+\contentsline {subsubsection}{\numberline {4.1.2.17}LCD\_RW\_PORT}{14}{subsubsection.4.1.2.17}%
+\contentsline {subsubsection}{\numberline {4.1.2.18}LCD\_START\_LINE1}{14}{subsubsection.4.1.2.18}%
+\contentsline {subsubsection}{\numberline {4.1.2.19}LCD\_START\_LINE2}{14}{subsubsection.4.1.2.19}%
+\contentsline {subsubsection}{\numberline {4.1.2.20}LCD\_START\_LINE3}{14}{subsubsection.4.1.2.20}%
+\contentsline {subsubsection}{\numberline {4.1.2.21}LCD\_START\_LINE4}{14}{subsubsection.4.1.2.21}%
+\contentsline {subsubsection}{\numberline {4.1.2.22}LCD\_WRAP\_LINES}{15}{subsubsection.4.1.2.22}%
+\contentsline {subsection}{\numberline {4.1.3}Function Documentation}{15}{subsection.4.1.3}%
+\contentsline {subsubsection}{\numberline {4.1.3.1}lcd\_clrscr()}{15}{subsubsection.4.1.3.1}%
+\contentsline {subsubsection}{\numberline {4.1.3.2}lcd\_command()}{15}{subsubsection.4.1.3.2}%
+\contentsline {subsubsection}{\numberline {4.1.3.3}lcd\_data()}{16}{subsubsection.4.1.3.3}%
+\contentsline {subsubsection}{\numberline {4.1.3.4}lcd\_gotoxy()}{16}{subsubsection.4.1.3.4}%
+\contentsline {subsubsection}{\numberline {4.1.3.5}lcd\_home()}{16}{subsubsection.4.1.3.5}%
+\contentsline {subsubsection}{\numberline {4.1.3.6}lcd\_init()}{17}{subsubsection.4.1.3.6}%
+\contentsline {subsubsection}{\numberline {4.1.3.7}lcd\_putc()}{17}{subsubsection.4.1.3.7}%
+\contentsline {subsubsection}{\numberline {4.1.3.8}lcd\_puts()}{18}{subsubsection.4.1.3.8}%
+\contentsline {subsubsection}{\numberline {4.1.3.9}lcd\_puts\_p()}{18}{subsubsection.4.1.3.9}%
+\contentsline {section}{\numberline {4.2}Main file $<$main.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}c$>$}{19}{section.4.2}%
+\contentsline {subsection}{\numberline {4.2.1}Detailed Description}{19}{subsection.4.2.1}%
+\contentsline {section}{\numberline {4.3}D\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}AC Library $<$Sig\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}gen.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h$>$}{20}{section.4.3}%
+\contentsline {subsection}{\numberline {4.3.1}Detailed Description}{20}{subsection.4.3.1}%
+\contentsline {subsection}{\numberline {4.3.2}Function Documentation}{20}{subsection.4.3.2}%
+\contentsline {subsubsection}{\numberline {4.3.2.1}generate\_signal()}{20}{subsubsection.4.3.2.1}%
+\contentsline {subsubsection}{\numberline {4.3.2.2}return\_wvftype()}{21}{subsubsection.4.3.2.2}%
+\contentsline {subsubsection}{\numberline {4.3.2.3}send\_uart()}{21}{subsubsection.4.3.2.3}%
+\contentsline {subsubsection}{\numberline {4.3.2.4}update\_disp()}{22}{subsubsection.4.3.2.4}%
+\contentsline {section}{\numberline {4.4}U\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}A\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}RT Library $<$uart.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h$>$}{23}{section.4.4}%
+\contentsline {subsection}{\numberline {4.4.1}Detailed Description}{24}{subsection.4.4.1}%
+\contentsline {subsection}{\numberline {4.4.2}Macro Definition Documentation}{24}{subsection.4.4.2}%
+\contentsline {subsubsection}{\numberline {4.4.2.1}UART\_BAUD\_SELECT}{24}{subsubsection.4.4.2.1}%
+\contentsline {subsubsection}{\numberline {4.4.2.2}UART\_BAUD\_SELECT\_DOUBLE\_SPEED}{25}{subsubsection.4.4.2.2}%
+\contentsline {subsubsection}{\numberline {4.4.2.3}UART\_RX\_BUFFER\_SIZE}{25}{subsubsection.4.4.2.3}%
+\contentsline {subsubsection}{\numberline {4.4.2.4}UART\_TX\_BUFFER\_SIZE}{25}{subsubsection.4.4.2.4}%
+\contentsline {subsection}{\numberline {4.4.3}Function Documentation}{25}{subsection.4.4.3}%
+\contentsline {subsubsection}{\numberline {4.4.3.1}uart1\_getc()}{26}{subsubsection.4.4.3.1}%
+\contentsline {subsubsection}{\numberline {4.4.3.2}uart1\_init()}{26}{subsubsection.4.4.3.2}%
+\contentsline {subsubsection}{\numberline {4.4.3.3}uart1\_putc()}{26}{subsubsection.4.4.3.3}%
+\contentsline {subsubsection}{\numberline {4.4.3.4}uart1\_puts()}{26}{subsubsection.4.4.3.4}%
+\contentsline {subsubsection}{\numberline {4.4.3.5}uart1\_puts\_p()}{27}{subsubsection.4.4.3.5}%
+\contentsline {subsubsection}{\numberline {4.4.3.6}uart\_getc()}{27}{subsubsection.4.4.3.6}%
+\contentsline {subsubsection}{\numberline {4.4.3.7}uart\_init()}{27}{subsubsection.4.4.3.7}%
+\contentsline {subsubsection}{\numberline {4.4.3.8}uart\_putc()}{28}{subsubsection.4.4.3.8}%
+\contentsline {subsubsection}{\numberline {4.4.3.9}uart\_puts()}{28}{subsubsection.4.4.3.9}%
+\contentsline {subsubsection}{\numberline {4.4.3.10}uart\_puts\_p()}{29}{subsubsection.4.4.3.10}%
+\contentsline {chapter}{\numberline {5}File Documentation}{31}{chapter.5}%
+\contentsline {section}{\numberline {5.1}lcd.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h File Reference}{31}{section.5.1}%
+\contentsline {section}{\numberline {5.2}main.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}c File Reference}{33}{section.5.2}%
+\contentsline {subsection}{\numberline {5.2.1}Macro Definition Documentation}{34}{subsection.5.2.1}%
+\contentsline {subsubsection}{\numberline {5.2.1.1}F\_CPU}{34}{subsubsection.5.2.1.1}%
+\contentsline {section}{\numberline {5.3}Sig\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}gen.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h File Reference}{34}{section.5.3}%
+\contentsline {section}{\numberline {5.4}timer.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h File Reference}{34}{section.5.4}%
+\contentsline {subsection}{\numberline {5.4.1}Detailed Description}{35}{subsection.5.4.1}%
+\contentsline {subsection}{\numberline {5.4.2}Macro Definition Documentation}{35}{subsection.5.4.2}%
+\contentsline {subsubsection}{\numberline {5.4.2.1}TIM1\_stop}{36}{subsubsection.5.4.2.1}%
+\contentsline {subsubsection}{\numberline {5.4.2.2}TIM2\_stop}{36}{subsubsection.5.4.2.2}%
+\contentsline {section}{\numberline {5.5}uart.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h File Reference}{36}{section.5.5}%
+\contentsline {chapter}{Index}{39}{section*.20}%

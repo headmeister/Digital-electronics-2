@@ -1,0 +1,193 @@
+\begin{theindex}
+
+  \item {DAC Library $<$Sig\_gen.h$>$}, \hyperpage{20}
+    \subitem {generate\_signal}, \hyperpage{20}
+    \subitem {return\_wvftype}, \hyperpage{21}
+    \subitem {send\_uart}, \hyperpage{21}
+    \subitem {update\_disp}, \hyperpage{22}
+
+  \indexspace
+
+  \item {F\_CPU}
+    \subitem {main.c}, \hyperpage{34}
+
+  \indexspace
+
+  \item {generate\_signal}
+    \subitem {DAC Library $<$Sig\_gen.h$>$}, \hyperpage{20}
+
+  \indexspace
+
+  \item {LCD library $<$lcd.h$>$}, \hyperpage{7}
+    \subitem {lcd\_clrscr}, \hyperpage{15}
+    \subitem {lcd\_command}, \hyperpage{15}
+    \subitem {LCD\_CONTROLLER\_KS0073}, \hyperpage{10}
+    \subitem {lcd\_data}, \hyperpage{15}
+    \subitem {LCD\_DATA0\_PORT}, \hyperpage{10}
+    \subitem {LCD\_DATA1\_PORT}, \hyperpage{11}
+    \subitem {LCD\_DATA2\_PORT}, \hyperpage{11}
+    \subitem {LCD\_DATA3\_PORT}, \hyperpage{11}
+    \subitem {LCD\_DELAY\_BOOTUP}, \hyperpage{11}
+    \subitem {LCD\_DELAY\_BUSY\_FLAG}, \hyperpage{11}
+    \subitem {LCD\_DELAY\_ENABLE\_PULSE}, \hyperpage{12}
+    \subitem {LCD\_DELAY\_INIT}, \hyperpage{12}
+    \subitem {LCD\_DELAY\_INIT\_4BIT}, \hyperpage{12}
+    \subitem {LCD\_DELAY\_INIT\_REP}, \hyperpage{12}
+    \subitem {LCD\_DISP\_LENGTH}, \hyperpage{12}
+    \subitem {lcd\_gotoxy}, \hyperpage{16}
+    \subitem {lcd\_home}, \hyperpage{16}
+    \subitem {lcd\_init}, \hyperpage{17}
+    \subitem {LCD\_IO\_MODE}, \hyperpage{13}
+    \subitem {LCD\_LINE\_LENGTH}, \hyperpage{13}
+    \subitem {LCD\_LINES}, \hyperpage{13}
+    \subitem {lcd\_putc}, \hyperpage{17}
+    \subitem {lcd\_puts}, \hyperpage{17}
+    \subitem {lcd\_puts\_p}, \hyperpage{18}
+    \subitem {LCD\_RW\_PIN}, \hyperpage{13}
+    \subitem {LCD\_RW\_PORT}, \hyperpage{13}
+    \subitem {LCD\_START\_LINE1}, \hyperpage{14}
+    \subitem {LCD\_START\_LINE2}, \hyperpage{14}
+    \subitem {LCD\_START\_LINE3}, \hyperpage{14}
+    \subitem {LCD\_START\_LINE4}, \hyperpage{14}
+    \subitem {LCD\_WRAP\_LINES}, \hyperpage{14}
+  \item {lcd.h}, \hyperpage{31}
+  \item {lcd\_clrscr}
+    \subitem {LCD library $<$lcd.h$>$}, \hyperpage{15}
+  \item {lcd\_command}
+    \subitem {LCD library $<$lcd.h$>$}, \hyperpage{15}
+  \item {LCD\_CONTROLLER\_KS0073}
+    \subitem {LCD library $<$lcd.h$>$}, \hyperpage{10}
+  \item {lcd\_data}
+    \subitem {LCD library $<$lcd.h$>$}, \hyperpage{15}
+  \item {LCD\_DATA0\_PORT}
+    \subitem {LCD library $<$lcd.h$>$}, \hyperpage{10}
+  \item {LCD\_DATA1\_PORT}
+    \subitem {LCD library $<$lcd.h$>$}, \hyperpage{11}
+  \item {LCD\_DATA2\_PORT}
+    \subitem {LCD library $<$lcd.h$>$}, \hyperpage{11}
+  \item {LCD\_DATA3\_PORT}
+    \subitem {LCD library $<$lcd.h$>$}, \hyperpage{11}
+  \item {LCD\_DELAY\_BOOTUP}
+    \subitem {LCD library $<$lcd.h$>$}, \hyperpage{11}
+  \item {LCD\_DELAY\_BUSY\_FLAG}
+    \subitem {LCD library $<$lcd.h$>$}, \hyperpage{11}
+  \item {LCD\_DELAY\_ENABLE\_PULSE}
+    \subitem {LCD library $<$lcd.h$>$}, \hyperpage{12}
+  \item {LCD\_DELAY\_INIT}
+    \subitem {LCD library $<$lcd.h$>$}, \hyperpage{12}
+  \item {LCD\_DELAY\_INIT\_4BIT}
+    \subitem {LCD library $<$lcd.h$>$}, \hyperpage{12}
+  \item {LCD\_DELAY\_INIT\_REP}
+    \subitem {LCD library $<$lcd.h$>$}, \hyperpage{12}
+  \item {LCD\_DISP\_LENGTH}
+    \subitem {LCD library $<$lcd.h$>$}, \hyperpage{12}
+  \item {lcd\_gotoxy}
+    \subitem {LCD library $<$lcd.h$>$}, \hyperpage{16}
+  \item {lcd\_home}
+    \subitem {LCD library $<$lcd.h$>$}, \hyperpage{16}
+  \item {lcd\_init}
+    \subitem {LCD library $<$lcd.h$>$}, \hyperpage{17}
+  \item {LCD\_IO\_MODE}
+    \subitem {LCD library $<$lcd.h$>$}, \hyperpage{13}
+  \item {LCD\_LINE\_LENGTH}
+    \subitem {LCD library $<$lcd.h$>$}, \hyperpage{13}
+  \item {LCD\_LINES}
+    \subitem {LCD library $<$lcd.h$>$}, \hyperpage{13}
+  \item {lcd\_putc}
+    \subitem {LCD library $<$lcd.h$>$}, \hyperpage{17}
+  \item {lcd\_puts}
+    \subitem {LCD library $<$lcd.h$>$}, \hyperpage{17}
+  \item {lcd\_puts\_p}
+    \subitem {LCD library $<$lcd.h$>$}, \hyperpage{18}
+  \item {LCD\_RW\_PIN}
+    \subitem {LCD library $<$lcd.h$>$}, \hyperpage{13}
+  \item {LCD\_RW\_PORT}
+    \subitem {LCD library $<$lcd.h$>$}, \hyperpage{13}
+  \item {LCD\_START\_LINE1}
+    \subitem {LCD library $<$lcd.h$>$}, \hyperpage{14}
+  \item {LCD\_START\_LINE2}
+    \subitem {LCD library $<$lcd.h$>$}, \hyperpage{14}
+  \item {LCD\_START\_LINE3}
+    \subitem {LCD library $<$lcd.h$>$}, \hyperpage{14}
+  \item {LCD\_START\_LINE4}
+    \subitem {LCD library $<$lcd.h$>$}, \hyperpage{14}
+  \item {LCD\_WRAP\_LINES}
+    \subitem {LCD library $<$lcd.h$>$}, \hyperpage{14}
+
+  \indexspace
+
+  \item {Main file $<$main.c$>$}, \hyperpage{19}
+  \item {main.c}, \hyperpage{33}
+    \subitem {F\_CPU}, \hyperpage{34}
+
+  \indexspace
+
+  \item {return\_wvftype}
+    \subitem {DAC Library $<$Sig\_gen.h$>$}, \hyperpage{21}
+
+  \indexspace
+
+  \item {send\_uart}
+    \subitem {DAC Library $<$Sig\_gen.h$>$}, \hyperpage{21}
+  \item {Sig\_gen.h}, \hyperpage{34}
+
+  \indexspace
+
+  \item {TIM1\_stop}
+    \subitem {timer.h}, \hyperpage{35}
+  \item {TIM2\_stop}
+    \subitem {timer.h}, \hyperpage{36}
+  \item {timer.h}, \hyperpage{34}
+    \subitem {TIM1\_stop}, \hyperpage{35}
+    \subitem {TIM2\_stop}, \hyperpage{36}
+
+  \indexspace
+
+  \item {UART Library $<$uart.h$>$}, \hyperpage{23}
+    \subitem {uart1\_getc}, \hyperpage{25}
+    \subitem {uart1\_init}, \hyperpage{26}
+    \subitem {uart1\_putc}, \hyperpage{26}
+    \subitem {uart1\_puts}, \hyperpage{26}
+    \subitem {uart1\_puts\_p}, \hyperpage{26}
+    \subitem {UART\_BAUD\_SELECT}, \hyperpage{24}
+    \subitem {UART\_BAUD\_SELECT\_DOUBLE\_SPEED}, \hyperpage{25}
+    \subitem {uart\_getc}, \hyperpage{27}
+    \subitem {uart\_init}, \hyperpage{27}
+    \subitem {uart\_putc}, \hyperpage{28}
+    \subitem {uart\_puts}, \hyperpage{28}
+    \subitem {uart\_puts\_p}, \hyperpage{29}
+    \subitem {UART\_RX\_BUFFER\_SIZE}, \hyperpage{25}
+    \subitem {UART\_TX\_BUFFER\_SIZE}, \hyperpage{25}
+  \item {uart.h}, \hyperpage{36}
+  \item {uart1\_getc}
+    \subitem {UART Library $<$uart.h$>$}, \hyperpage{25}
+  \item {uart1\_init}
+    \subitem {UART Library $<$uart.h$>$}, \hyperpage{26}
+  \item {uart1\_putc}
+    \subitem {UART Library $<$uart.h$>$}, \hyperpage{26}
+  \item {uart1\_puts}
+    \subitem {UART Library $<$uart.h$>$}, \hyperpage{26}
+  \item {uart1\_puts\_p}
+    \subitem {UART Library $<$uart.h$>$}, \hyperpage{26}
+  \item {UART\_BAUD\_SELECT}
+    \subitem {UART Library $<$uart.h$>$}, \hyperpage{24}
+  \item {UART\_BAUD\_SELECT\_DOUBLE\_SPEED}
+    \subitem {UART Library $<$uart.h$>$}, \hyperpage{25}
+  \item {uart\_getc}
+    \subitem {UART Library $<$uart.h$>$}, \hyperpage{27}
+  \item {uart\_init}
+    \subitem {UART Library $<$uart.h$>$}, \hyperpage{27}
+  \item {uart\_putc}
+    \subitem {UART Library $<$uart.h$>$}, \hyperpage{28}
+  \item {uart\_puts}
+    \subitem {UART Library $<$uart.h$>$}, \hyperpage{28}
+  \item {uart\_puts\_p}
+    \subitem {UART Library $<$uart.h$>$}, \hyperpage{29}
+  \item {UART\_RX\_BUFFER\_SIZE}
+    \subitem {UART Library $<$uart.h$>$}, \hyperpage{25}
+  \item {UART\_TX\_BUFFER\_SIZE}
+    \subitem {UART Library $<$uart.h$>$}, \hyperpage{25}
+  \item {update\_disp}
+    \subitem {DAC Library $<$Sig\_gen.h$>$}, \hyperpage{22}
+
+\end{theindex}

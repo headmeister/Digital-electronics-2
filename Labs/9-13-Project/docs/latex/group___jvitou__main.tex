@@ -1,0 +1,29 @@
+\hypertarget{group___jvitou__main}{}\doxysection{Main file $<$main.\+c$>$}
+\label{group___jvitou__main}\index{Main file $<$main.c$>$@{Main file $<$main.c$>$}}
+
+
+D\+AC signal generating, using A\+VR M\+Cu and R2R D\+AC with output on 16x2 L\+CD and U\+A\+RT.  
+
+
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{group___jvitou__main_ga6720b53a0933baf0ba25f938d8c06354}\label{group___jvitou__main_ga6720b53a0933baf0ba25f938d8c06354}} 
+void \mbox{\hyperlink{group___jvitou__main_ga6720b53a0933baf0ba25f938d8c06354}{decode\+\_\+button}} ()
+\begin{DoxyCompactList}\small\item\em Decodes the selected button from butt variable. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group___jvitou__main_gac7a391d62b96ecc337089ad83dbf6377}\label{group___jvitou__main_gac7a391d62b96ecc337089ad83dbf6377}} 
+void \mbox{\hyperlink{group___jvitou__main_gac7a391d62b96ecc337089ad83dbf6377}{change\+\_\+size}} ()
+\begin{DoxyCompactList}\small\item\em Changes the size of an array appropriatel to period, can switch timer ovf period if required (if the period does not fit within the interval, not used currently) \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+D\+AC signal generating, using A\+VR M\+Cu and R2R D\+AC with output on 16x2 L\+CD and U\+A\+RT. 
+
+This project uses simple R2R D\+AC to generate some usefull waveforms in frequency range from 100 Hz to 2k\+Hz. It uses two main timers, first to sample the output signal and second to check pressed buttons and update signal parameters and display them onto L\+CD or send throught U\+A\+RT.
+
+\begin{DoxyNote}{Note}
+Uses Peter Fleurys libraries for L\+CD and U\+A\+RT communication 
+\end{DoxyNote}
+\begin{DoxyAuthor}{Author}
+Jiri Vitous 
+\end{DoxyAuthor}

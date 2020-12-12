@@ -19,7 +19,7 @@ Idx Name          Size      VMA       LMA       File off  Algn
                   CONTENTS, READONLY, DEBUGGING
   7 .debug_abbrev 00000c95  00000000  00000000  00003722  2**0
                   CONTENTS, READONLY, DEBUGGING
-  8 .debug_line   00001054  00000000  00000000  000043b7  2**0
+  8 .debug_line   00001055  00000000  00000000  000043b7  2**0
                   CONTENTS, READONLY, DEBUGGING
   9 .debug_frame  000003fc  00000000  00000000  0000540c  2**2
                   CONTENTS, READONLY, DEBUGGING
@@ -637,7 +637,7 @@ void change_size()													// change the active frame buffer size to contain
 
 	}
 
-	switch (timer_index)	// Theoretical: can switch the timer ovf period to update frequency, this however changes sampling frequency for which will the recon. filters not suffice
+	switch (timer_index)// Theoretical: can switch the timer ovf period to update frequency, this however changes sampling frequency, for which will the recon. filters on output not suffice
      428:	80 91 6a 04 	lds	r24, 0x046A	; 0x80046a <__data_end>
      42c:	81 30       	cpi	r24, 0x01	; 1
      42e:	59 f0       	breq	.+22     	; 0x446 <__LOCK_REGION_LENGTH__+0x46>

@@ -4,9 +4,9 @@
 
 Sestavit R2R 8bitový DAC převodník ovládaný keypadem o rozměrech 4x3 tlačítek. S výstupem na display a UART.
 ### Shrnutí funkcí
-	* Převodník DAC s analogovou částí rekonstrukčních filtrů
-	* Proměnlivá frekvence generovaného signálu 100-3000Hz
-	* Různé typy signálů: (sinus, pila, obdélník, trojúhelník, pulzy, DTMF)
+* Převodník DAC s analogovou částí rekonstrukčních filtrů
+* Proměnlivá frekvence generovaného signálu 100-3000Hz
+* Různé typy signálů: (sinus, pila, obdélník, trojúhelník, pulzy, DTMF)
 	
 
 

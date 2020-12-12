@@ -1,12 +1,19 @@
 /*
- * Sig_gen.c
- *
- * Created: 18.11.2020 16:43:44
- *  Author: jira
- */ 
-#include <avr/io.h>			// include IO operation setting
-//#include <math.h>			// Include math library for signal generation
+* Sig_gen.c
+*
+* Created: 18.11.2020 16:43:44
+*  Author: jira
+*/
+#include <avr/io.h>										// include IO operation setting
+//#include <math.h>										// Include math library for signal generation
+#include "lcd.h"
+#include <stdlib.h>
+#include <string.h>
+#include "uart.h"
+#include "Sig_gen.h"
+const uint8_t type_map[]={9,6,3,10,8,5,2,10,7,4,1};		// mapping of button ports to numbers
 
+/* LUT for sinewave (full period)*/
 const uint8_t lookup_sine[]=
 {
 	128,129,131,132,134,135,137,138,
@@ -75,6 +82,7 @@ const uint8_t lookup_sine[]=
 	115,117,118,120,121,123,124,126
 };
 
+/* LUT for ECG signal*/
 const uint8_t ecg_lookup[]=
 {
 	17,26,21,24,24,24,23,23,26,25,24,
@@ -95,28 +103,28 @@ const uint8_t ecg_lookup[]=
 };
 
 
+
 void generate_signal(uint8_t* frame_buffer, uint8_t type, uint16_t freq,float tim_set,uint8_t multiplier)
 {
 	
 	
+	type=type_map[type-1];										// find which button has been pressed
 	
 	
+	uint16_t arr_length= (uint16_t)(((1/(float)freq))/tim_set);	// calculate required array length to accomodate full period
+	uint16_t index=0;											// used for DTMF generation
 	
-	uint16_t arr_length= (uint16_t)(((1/(float)freq))/tim_set);	
-	uint16_t index=0;
-	if(arr_length>1000)
+	if(arr_length>1000)											// in case the array_length would exceed the frame_buffer size cap it, when using this fcn correctly it should not happen though
 	arr_length=1000;
-	 
 	
-	switch (type)
+	
+	switch (type)												// which type of function to generate
 	{
 		case 1: // sin function
 		for(uint16_t i=0; i<arr_length;i++)
 		{
-			
-		//	*frame_buffer=(uint8_t)(127.5*cos((float)(i)*2*M_PI/(float)arr_length)+127.5);
-			*frame_buffer=lookup_sine[(uint16_t)((float)i/(float)arr_length*511.0)];
-			frame_buffer++;
+			*frame_buffer=lookup_sine[(uint16_t)((float)i/(float)arr_length*511.0)];	// put point from LUT at position in frame buffer
+			frame_buffer++;																// incr framebuffer pointer
 		}
 		break;
 		
@@ -125,7 +133,7 @@ void generate_signal(uint8_t* frame_buffer, uint8_t type, uint16_t freq,float ti
 		for(uint16_t i=0; i<arr_length;i++)
 		{
 			
-		   *frame_buffer=(uint8_t)((float)i/arr_length*255);
+			*frame_buffer=(uint8_t)((float)i/arr_length*255);
 			frame_buffer++;
 		}
 		break;
@@ -176,8 +184,7 @@ void generate_signal(uint8_t* frame_buffer, uint8_t type, uint16_t freq,float ti
 		case 7: // Halfwave Rectified
 		for(uint16_t i=0; i<arr_length;i++)
 		{
-			
-			//	*frame_buffer=(uint8_t)(127.5*cos((float)(i)*2*M_PI/(float)arr_length)+127.5);
+
 			index=(uint16_t)((float)i/(float)arr_length*511.0);
 			if(i<(arr_length/2))
 			*frame_buffer=(lookup_sine[index]-128)*2;
@@ -192,17 +199,10 @@ void generate_signal(uint8_t* frame_buffer, uint8_t type, uint16_t freq,float ti
 		for(uint16_t i=0; i<arr_length;i++)
 		{
 			
-				
-				//	*frame_buffer=(uint8_t)(127.5*cos((float)(i)*2*M_PI/(float)arr_length)+127.5);
-				*frame_buffer=ecg_lookup[(uint16_t)((float)i/(float)arr_length*234.0)];
-				frame_buffer++;
-			
-			//	*frame_buffer=(uint8_t)(127.5*cos((float)(i)*2*M_PI/(float)arr_length)+127.5);
-			//*frame_buffer=(uint8_t)((((float)((float)lookup_sine[(uint16_t)((float)i/(float)arr_length*511.0)]-128)/128)*(float)((float)lookup_sine[index]-128)/128)*128+128);
-			
-			
-			
-			
+
+			*frame_buffer=ecg_lookup[(uint16_t)((float)i/(float)arr_length*234.0)];
+			frame_buffer++;
+
 			
 		}
 		break;
@@ -211,8 +211,6 @@ void generate_signal(uint8_t* frame_buffer, uint8_t type, uint16_t freq,float ti
 		case 9: // DTMF
 		for(uint16_t i=0; i<arr_length;i++)
 		{
-			
-			//	*frame_buffer=(uint8_t)(127.5*cos((float)(i)*2*M_PI/(float)arr_length)+127.5);
 			
 			index=(uint16_t)((float)i/(float)arr_length*511.0*multiplier);
 			
@@ -236,3 +234,119 @@ void generate_signal(uint8_t* frame_buffer, uint8_t type, uint16_t freq,float ti
 	
 }
 
+
+
+
+void send_uart(uint8_t type,uint16_t frequency)
+{
+	char text[10]={0};
+	uart_puts("F: \0");
+	itoa(frequency,text,10);
+	uart_puts(text);
+	uart_puts(" Hz, Waveform: ");
+	return_wvftype(text,type);
+	uart_puts(text);
+	uart_puts("\n");
+	
+}
+
+
+
+void return_wvftype(char text[],uint8_t type)
+{
+	const char rsin[]="FWRS";
+	const char dtmf[]="DTMF";
+	const char triag[]="Triangle";
+	switch (type_map[type-1])
+	{
+		case 1:
+		strncpy(text,"Sin",4);
+		break;
+		
+		case 2:
+		strncpy(text,"Ramp+",5);
+		break;
+		
+		case 3:
+		strncpy(text,"Ramp-",6);
+		break;
+		
+		case 4:
+		strncpy(text,"Square",7);
+		break;
+		
+		case 5:
+		strncpy(text,triag,8);
+		break;
+		
+		case 6:
+		strncpy(text,rsin,6);
+		break;
+		
+		case 7:
+		strncpy(text,"HWRS",4);
+		break;
+		
+		case 8:
+		strncpy(text,"ECG",4);
+		break;
+		
+		case 9:
+		strncpy(text,dtmf,4);
+		break;
+		
+		default:
+		type=255;
+		break;
+		
+		
+	}
+}
+
+
+
+
+void update_disp(uint8_t type,uint16_t frequency,uint8_t multiplier)	//updates the LCD with the frequency
+{
+	
+	char text[10]={0};
+	const char reg[]="Gen.:";
+	const char multiplier_text[]=" M:";
+	return_wvftype(text,type);
+	
+	
+	if(type<255)	// if known type
+	{
+		
+		lcd_gotoxy(0,0);
+		
+		
+		if(type!=8 && type!=0 && type!=4)		// if changed frequency no need to overwrite the generated wvf on lCD
+		{
+			
+			
+			lcd_puts(reg);
+			lcd_puts("                ");		// Clear the appropriate space
+			lcd_gotoxy(6,0);
+			lcd_puts(text);
+			if(type_map[type-1]==9)
+			{
+				lcd_puts(multiplier_text);
+				itoa(multiplier,text,10);
+				lcd_puts(text);
+			}
+		}
+		
+		
+		
+		lcd_gotoxy(0,1);
+		lcd_puts("                ");			// Clear the appropriate space
+		
+		lcd_gotoxy(0,1);
+		lcd_puts("Freq.: ");
+		itoa(frequency,text,10);
+		lcd_puts(text);
+		lcd_puts(" Hz");
+		
+	}
+}

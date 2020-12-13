@@ -23,7 +23,9 @@ LCD display komunikuje v 4 bitovém módu pro ušetření pinů. Každý sloupec
 ![Digi_schema](images/schema_analog.PNG )
 
 Analogová část se skládá ze samotného R2R ladderu, kde byly zvoleny hodnoty rezistorů 1 respektive 2 kOhm jako kompromis mezi zatížením pinů a rozumnou výstupní impedancí převodníku. Na nej je ihned navázán sledovač v podobě 
-neinvertujícího zapojení operačního zesilovače, který slouží jako impedanční transformátor mezi R2R převodníkem a rekonstrukčními filtry.
+neinvertujícího zapojení operačního zesilovače, který slouží jako impedanční transformátor mezi R2R převodníkem a rekonstrukčními filtry. R2R ladder funguje na principu superpozice děličů napětí, kdy toto superponované napětí
+odpovídá zlomkům druhých mocnin vstupního napětí. Tím pádem lze jako tato vstupní napětí využít přímo bity vstupního slova. Přičemž nejnižší bit se připojí na rezistorový dělič generující nejmenší napětí(nejblíže výstupu) a nejvyšší bit
+obsluhuje první dělič o hodnotě 1/2. 
 
 ### Návrh Rekonstrukčního filtru
 Rekonstrukční filtr typu DP byl navržen nástrojem firmy Analog Devices Analog Filter Wizard. Byl navržen jako DP 8. řádu s Butterworth Beselovou aproximací. Méně strmé aproximace byly zvoleny z důvodu fázového zkreslení.

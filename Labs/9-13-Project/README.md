@@ -51,6 +51,8 @@ U všech signálů je možné nastavit generovanou frekvenci v rozmezí 100 Hz a
 Nastavení frekvence se provádí tlačítky + a -  s tím, že při držení dochází k postupnému zvyšování kroku frekvence, pro rychlejší přeběh intervalu frekvencí.
 Po stisku tlačítka F se dá v módu DTMF měnit násobek druhé frekvence. po opětovném stisku se vrátíme k nastavení frekvence. Tlačítko F funguje pořád a jeho status se zobrazuje na displeji.
 
+Generování EKG signálu je zajištěno LUT do které byly vloženy hodnoty jedné periody reálného EKG signálu.
+
 ## Video
 
 

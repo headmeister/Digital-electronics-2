@@ -15,7 +15,7 @@
  *  @defgroup Jvitou_main Main file <main.c>
  * 
  *
- *  @brief	DAC signal generating, using AVR MCu and R2R DAC with output on 16x2 LCD and UART
+ *  @brief	DAC signal generating, using AVR MCu and R2R DAC with output on 16x2 LCD and UART.
  *
  *	This project uses simple R2R DAC to generate some usefull waveforms in frequency range from 100 Hz to 2kHz. It uses two main timers, first to sample the output signal and second to
  *	check pressed buttons and update signal parameters and display them onto LCD or send throught UART.
@@ -212,36 +212,55 @@ void decode_button(void)									// decodes which button has been pressed and up
 	static uint8_t type = 11;								//default setting (on start generate sinewave)
 	static uint8_t Func =0;
 	static uint8_t accum=0;									//accum variable for variable speed setting for frequency
-	static uint8_t prev_type=0;								// for locking frequency button
+	static uint8_t prev_type=255;							// for locking frequency button
+	uint8_t step=accum/4+1;
 	
 	
 	if (butt > 0)											// change anything and recalculate signal only when changing params (button was pressed)
 	{
 		
-
+		
 		while ((butt & 0x0001) == 0)						// find the button position
 		{
 			temp++;
 			butt = butt >> 1;
 		}
 		
+		
+		
 		if (temp == 0 || temp == 8 ||temp==4)
 		{
 			if(Func==0)										// if func button is not pressed change frequency
 			{
 				
-				if (temp == 0 && frequency < 2000)
+				
+					
+				
+				
+				
+				if (temp == 0 && (frequency+step) <= 2000)
 				{
-					frequency++;
+					
+					frequency+=step;
+				}
+				else if(temp == 0 && (frequency+step) > 2000)
+				{
+					frequency=2000;
 				}
 
-				if (temp == 8 && frequency > 100)
+				if (temp == 8 && (frequency-step) >= 100)
 				{
-					frequency--;
+					frequency-=step;
+				}
+				else if(temp == 8 && (frequency-step) < 100)
+				{
+					frequency=100;
 				}
 			}
 			else
 			{
+
+				
 				if (temp == 0 && multiplier < 5)			// if F button has been pressed change the DTMF multiplier
 				{
 					multiplier++;
@@ -262,7 +281,10 @@ void decode_button(void)									// decodes which button has been pressed and up
 		if(temp==4)											// if F button pressed 
 		{
 			if( prev_type!=4)								// if it is not beeing pushed down
-			Func^=0x01;										//flip function 0-1
+			Func^=0x01;	
+															//flip function 0-1
+			
+			
 		}
 		else
 		{
@@ -275,12 +297,25 @@ void decode_button(void)									// decodes which button has been pressed and up
 			send_uart(type,frequency);
 		}
 		
-		if(type==prev_type && accum<200) //
+		if(Func>0)
 		{
+			lcd_gotoxy(14,1);
+			lcd_puts(" F");
+		}
+		else
+		{
+			lcd_gotoxy(14,1);
+			lcd_puts("  ");
+		}
+		
+		if(temp==prev_type) 
+		{
+			if(accum<240)
 			accum++;
 		}
 		else
 		{
+			
 			accum=0;
 			prev_type=temp;
 		}
@@ -318,8 +353,6 @@ void change_size()													// change the active frame buffer size to contain
 	{
 		tim_set = timer_values[--timer_index];
 		arr_size = (uint16_t)(((1 / (float)frequency)) / tim_set);
-
-
 	}
 
 	switch (timer_index)// Theoretical: can switch the timer ovf period to update frequency, this however changes sampling frequency, for which will the recon. filters on output not suffice

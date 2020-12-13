@@ -162,10 +162,10 @@ void generate_signal(uint8_t* frame_buffer, uint8_t type, uint16_t freq,float ti
 		case 5: // triangle
 		for(uint16_t i=0; i<arr_length;i++)
 		{
-			if(i<arr_length/2)
-			*frame_buffer=(uint8_t)((float)i/arr_length*255);
+			if(i<=arr_length/2)
+			*frame_buffer=(uint8_t)((float)i/arr_length*254.5)*2;
 			else
-			*frame_buffer=(uint8_t)(255-(float)i/arr_length*255);;
+			*frame_buffer=(uint8_t)(255-(float)i/arr_length*255)*2;
 			
 			frame_buffer++;
 		}
@@ -340,7 +340,7 @@ void update_disp(uint8_t type,uint16_t frequency,uint8_t multiplier)	//updates t
 		
 		
 		lcd_gotoxy(0,1);
-		lcd_puts("                ");			// Clear the appropriate space
+		lcd_puts("                     ");			// Clear the appropriate space
 		
 		lcd_gotoxy(0,1);
 		lcd_puts("Freq.: ");

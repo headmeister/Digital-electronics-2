@@ -1,5 +1,17 @@
 <circuit noLinAcc="5" animate="0" type="simulide_0.4" speed="1000000" reactStep="50">
  
+TextComponent-251: 
+<item Text="1-Sinus&#xa;2-Ramp+&#xa;3-Ramp-&#xa;4-Square&#xa;5-Triangle&#xa;6-Dvoucestně usměrněný sinus&#xa;7-Jednocestně usměrněný sinus&#xa;8-EKG&#xa;9-DTMF" valLabely="0" Show_id="false" valLabelx="0" hflip="1" Opacity="1" Font="Helvetica [Cronyx]" vflip="1" Border="1" x="40" labely="-24" rotation="0" id="TextComponent-251" objectName="TextComponent-251" Margin="5" valLabRot="0" y="-320" labelrot="0" Fixed_Width="true" labelx="-16" itemtype="TextComponent" Font_Size="10"/>
+ 
+TextComponent-250: 
+<item Text="Startup guide:&#xa;Tlačítky 1-9 se mění typ generovaného signálu.&#xa;Tlačíky +- se nastavuje frekvence.&#xa;Tlačítkem F se přepíná mód pro nastavení parametru DTMF (násobek druhé frekvence),&#xa;Po jeho stistku se zobrazí F na displeji značící, že je aktivováno.&#xa;Opětovným stiskem je možno opět měnit frekvenci(100-2000 Hz).&#xa;Informace je možné vyčítat i z UART." valLabely="0" Show_id="false" valLabelx="0" hflip="1" Opacity="1" Font="Helvetica [Cronyx]" vflip="1" Border="1" x="-832" labely="-24" rotation="0" id="TextComponent-248" objectName="TextComponent-250" Margin="5" valLabRot="0" y="-472" labelrot="0" Fixed_Width="true" labelx="-16" itemtype="TextComponent" Font_Size="12"/>
+ 
+TextComponent-249: 
+<item Text="R2R DAC" valLabely="0" Show_id="false" valLabelx="0" hflip="1" Opacity="1" Font="Helvetica [Cronyx]" vflip="1" Border="1" x="40" labely="-24" rotation="0" id="TextComponent-248" objectName="TextComponent-249" Margin="5" valLabRot="0" y="-24" labelrot="0" Fixed_Width="true" labelx="-16" itemtype="TextComponent" Font_Size="18"/>
+ 
+TextComponent-248: 
+<item Text="Rekonstrukční Filtr" valLabely="0" Show_id="false" valLabelx="0" hflip="1" Opacity="1" Font="Helvetica [Cronyx]" vflip="1" Border="1" x="-580" labely="-24" rotation="0" id="TextComponent-248" objectName="TextComponent-248" Margin="5" valLabRot="0" y="84" labelrot="0" Fixed_Width="true" labelx="-16" itemtype="TextComponent" Font_Size="18"/>
+ 
 Node-246: 
 <item Show_id="false" valLabelx="0" x="180" labelx="-16" hflip="1" vflip="1" y="48" valLabely="0" labely="-24" rotation="0" id="Node-246" labelrot="0" objectName="Node-246" itemtype="Node" valLabRot="0"/>
  
@@ -121,7 +133,7 @@ Oscope-43:
 <item Show_id="false" Filter="2" valLabelx="0" x="404" labelx="-100" hflip="1" vflip="1" y="196" valLabely="0" labely="-80" rotation="0" id="Oscope-37" labelrot="0" objectName="Oscope-43" itemtype="Oscope" valLabRot="0"/>
  
 Ground-42: 
-<item Show_id="false" valLabelx="0" x="136" labelx="-16" hflip="1" vflip="1" y="368" valLabely="0" labely="8" rotation="0" id="Ground-38" labelrot="0" objectName="Ground-42" itemtype="Ground" valLabRot="0"/>
+<item Show_id="false" valLabelx="0" x="188" labelx="-16" hflip="1" vflip="1" y="364" valLabely="0" labely="8" rotation="0" id="Ground-38" labelrot="0" objectName="Ground-42" itemtype="Ground" valLabRot="0"/>
  
 Resistor-41: 
 <item Resistance="1" Show_res="true" valLabely="6" Unit=" kΩ" Show_id="false" valLabelx="-16" hflip="1" vflip="1" x="-212" labely="-20" rotation="0" id="Resistor-40" objectName="Resistor-41" valLabRot="0" y="40" labelrot="0" labelx="-12" itemtype="Resistor"/>
@@ -244,10 +256,10 @@ Node-1:
 <item Show_id="false" valLabelx="0" x="180" labelx="-16" hflip="1" vflip="1" y="84" valLabely="0" labely="-24" rotation="0" id="Node-253" labelrot="0" objectName="Node-1" itemtype="Node" valLabRot="0"/>
  
 SerialTerm-82: 
-<item valLabely="0" sizey="302" Show_id="false" valLabelx="0" hflip="1" vflip="1" posy="447" x="-240" labely="-24" rotation="0" id="SerialTerm-194" posx="1619" objectName="SerialTerm-82" Mcu_Uart="1" valLabRot="0" y="-184" labelrot="0" labelx="-16" sizex="516" itemtype="SerialTerm"/>
+<item valLabely="0" sizey="303" Show_id="false" valLabelx="0" hflip="1" vflip="1" posy="406" x="-240" labely="-24" rotation="0" id="SerialTerm-194" posx="1730" objectName="SerialTerm-82" Mcu_Uart="1" valLabRot="0" y="-184" labelrot="0" labelx="-16" sizex="516" itemtype="SerialTerm"/>
  
 Connector-83: 
-<item valLabely="0" pointList="284,212,284,352,136,352" Show_id="false" valLabelx="0" hflip="1" startpinid="Oscope-43-PinN" vflip="1" x="284" labely="-24" rotation="0" id="Connector-39" objectName="Connector-83" valLabRot="0" y="212" enodeid="Circ_eNode-84" labelrot="0" labelx="-16" endpinid="Ground-42-Gnd" itemtype="Connector"/>
+<item valLabely="0" pointList="284,212,188,212,188,348" Show_id="false" valLabelx="0" hflip="1" startpinid="Oscope-43-PinN" vflip="1" x="284" labely="-24" rotation="0" id="Connector-39" objectName="Connector-83" valLabRot="0" y="212" enodeid="Circ_eNode-84" labelrot="0" labelx="-16" endpinid="Ground-42-Gnd" itemtype="Connector"/>
  
 Connector-85: 
 <item valLabely="0" pointList="-252,-72,-276,-72,-276,0" Show_id="false" valLabelx="0" hflip="1" startpinid="atmega328-45-PB0" vflip="1" x="-252" labely="-24" rotation="0" id="Connector-43" objectName="Connector-85" valLabRot="0" y="-72" enodeid="Circ_eNode-86" labelrot="0" labelx="-16" endpinid="Resistor-39-lPin" itemtype="Connector"/>

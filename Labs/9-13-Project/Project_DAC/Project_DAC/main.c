@@ -297,7 +297,7 @@ void decode_button(void)									// decodes which button has been pressed and up
 			send_uart(type,frequency);
 		}
 		
-		if(Func>0)
+		if(Func>0)											// display status of function button onto display
 		{
 			lcd_gotoxy(14,1);
 			lcd_puts(" F");

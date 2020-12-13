@@ -26,13 +26,13 @@ Analogová část se skládá ze samotného R2R ladderu, kde byly zvoleny hodnot
 neinvertujícího zapojení operačního zesilovače, který slouží jako impedanční transformátor mezi R2R převodníkem a rekonstrukčními filtry.
 
 ### Návrh Rekonstrukčního filtru
-Rekonstrukční filtr typu DP byl navržen nástrojem firmy Analog Devices Analog Filter Wizard. Byl navržen jako DP 4. řádu s Butterworth Beselovou aproximací. Méně strmé aproximace byly zvoleny z důvodu fázového zkreslení.
+Rekonstrukční filtr typu DP byl navržen nástrojem firmy Analog Devices Analog Filter Wizard. Byl navržen jako DP 8. řádu s Butterworth Beselovou aproximací. Méně strmé aproximace byly zvoleny z důvodu fázového zkreslení.
 Jako mezní frekvence byla zvolena frekvence 10 kHz, což dává rezervu 8 kHz nad maximální fundamentální složkou generovaného signálu (2 kHz) a zároveň umožňuje potlačit výrazně repliku spektra nad fvz/2=31 kHz.
 
 Výsledné charakteristiky:
-![Digi_schema](images/amplitude_char.PNG )
-![Digi_schema](images/Phase_char.PNG )
-
+![Amplitude char](images/amplitude_char.PNG )
+![Phase char](images/Phase_char.PNG )
+![Group delay](images/grp_delay.PNG )
 ## Popis kódu a simulace
 
 Kód využívá dvou časovačů TIMER0 a TIMER2. TIMER0 se využívá ke generování výstupního signálu, tedy jeho přetečení určuje vzorkovací frekvenci, ta je nastavena na 62,5 kHz. Při každém přetečení timeru nastává posunutí 
@@ -58,3 +58,4 @@ Po stisku tlačítka F se dá v módu DTMF měnit násobek druhé frekvence. po 
 
 * https://www.tek.com/blog/tutorial-digital-analog-conversion-r-2r-dac
 * http://www.peterfleury.epizy.com/avr-software.html
+* https://tools.analog.com/en/filterwizard/

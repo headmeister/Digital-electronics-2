@@ -6,7 +6,7 @@ Sestavit R2R 8bitový DAC převodník ovládaný keypadem o rozměrech 4x3 tlač
 ### Shrnutí funkcí
 * Převodník DAC s analogovou částí rekonstrukčních filtrů
 * Proměnlivá frekvence generovaného signálu 100-2000Hz
-* Různé typy signálů: (sinus, pila, obdélník, trojúhelník, pulzy, DTMF)
+* Různé typy signálů: (sinus, pila, obdélník, trojúhelník, usměrněný sinus, EKG, DTMF)
 	
 
 
@@ -52,6 +52,7 @@ Nastavení frekvence se provádí tlačítky + a -  s tím, že při držení do
 Po stisku tlačítka F se dá v módu DTMF měnit násobek druhé frekvence. po opětovném stisku se vrátíme k nastavení frekvence. Tlačítko F funguje pořád a jeho status se zobrazuje na displeji.
 
 Generování EKG signálu je zajištěno LUT, do které byly vloženy hodnoty jedné periody reálného EKG signálu.
+
 
 ## Video
 

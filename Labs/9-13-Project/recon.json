@@ -1,6 +1,6 @@
 {
-	"Name": "rekon",
-	"Description": "rekon",
+	"Name": "recon",
+	"Description": "recon_filt",
 	"Tool": "FW",
 	"Version": "1.1",
 	"Design": {
@@ -18,8 +18,8 @@
 			"passbandFrequency": 10000,
 			"stopbandAttenuation": -40,
 			"stopbandFrequency": 32000,
-			"filterResponseValue": 0.98,
-			"filterResponseSlider": "55",
+			"filterResponseValue": 0.12,
+			"filterResponseSlider": "91",
 			"centerFrequency": null
 		},
 		"components": {
@@ -30,8 +30,24 @@
 			"compensateForGbw": false,
 			"stages": [
 				{
+					"stageLetter": "D",
+					"componentSizing": 69,
+					"gain": 164,
+					"gainEnabled": false,
+					"implementation": "sallenKey",
+					"opAmps": "ADA4096-2"
+				},
+				{
+					"stageLetter": "C",
+					"componentSizing": 70,
+					"gain": 164,
+					"gainEnabled": false,
+					"implementation": "sallenKey",
+					"opAmps": "ADA4096-2"
+				},
+				{
 					"stageLetter": "B",
-					"componentSizing": 72,
+					"componentSizing": 71,
 					"gain": 164,
 					"gainEnabled": false,
 					"implementation": "sallenKey",
@@ -39,7 +55,7 @@
 				},
 				{
 					"stageLetter": "A",
-					"componentSizing": 72,
+					"componentSizing": 71,
 					"gain": 164,
 					"gainEnabled": false,
 					"implementation": "sallenKey",
@@ -49,7 +65,9 @@
 			"recommendedAmps": [],
 			"sortOrder": [
 				0,
-				1
+				1,
+				2,
+				3
 			]
 		},
 		"tolerances": {
@@ -63,6 +81,6 @@
 		},
 		"nextSteps": {}
 	},
-	"CreatedDate": "2020-12-09 01:07:14 AM",
-	"UpdatedDate": "2020-12-09 01:07:14 AM"
+	"CreatedDate": "2020-12-14 04:09:25 PM",
+	"UpdatedDate": "2020-12-14 04:09:25 PM"
 }

@@ -1,6 +1,5 @@
 # DAC převodník
 
-###
 Repo: https://github.com/headmeister/Digital-electronics-2/tree/master/Labs/9-13-Project
 
 Dokumentace se nachází v podadresáři docs
@@ -25,7 +24,7 @@ Jádrem digitální části je mikrokontrolér ATMEGA 328P, který slouží k ov
 LCD display komunikuje v 4 bitovém módu pro ušetření pinů. Každý sloupec respektive tlačítko keypadu se čte s opakovací frekvencí 325 Hz.
 
 ### Schéma analogové části
-![Digi_schema](images/schema_analog.PNG )
+![Analog_schema](images/schema_analog.PNG )
 
 Analogová část se skládá ze samotného R2R ladderu, kde byly zvoleny hodnoty rezistorů 1 respektive 2 kOhm jako kompromis mezi zatížením pinů a rozumnou výstupní impedancí převodníku. Na nej je ihned navázán sledovač v podobě 
 neinvertujícího zapojení operačního zesilovače, který slouží jako impedanční transformátor mezi R2R převodníkem a rekonstrukčními filtry. R2R ladder funguje na principu superpozice děličů napětí, kdy toto superponované napětí

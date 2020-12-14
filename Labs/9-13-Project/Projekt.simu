@@ -255,9 +255,6 @@ Node-3:
 Node-1: 
 <item Show_id="false" valLabelx="0" x="180" labelx="-16" hflip="1" vflip="1" y="84" valLabely="0" labely="-24" rotation="0" id="Node-253" labelrot="0" objectName="Node-1" itemtype="Node" valLabRot="0"/>
  
-SerialTerm-82: 
-<item valLabely="0" sizey="303" Show_id="false" valLabelx="0" hflip="1" vflip="1" posy="406" x="-240" labely="-24" rotation="0" id="SerialTerm-194" posx="1730" objectName="SerialTerm-82" Mcu_Uart="1" valLabRot="0" y="-184" labelrot="0" labelx="-16" sizex="516" itemtype="SerialTerm"/>
- 
 Connector-83: 
 <item valLabely="0" pointList="284,212,188,212,188,348" Show_id="false" valLabelx="0" hflip="1" startpinid="Oscope-43-PinN" vflip="1" x="284" labely="-24" rotation="0" id="Connector-39" objectName="Connector-83" valLabRot="0" y="212" enodeid="Circ_eNode-84" labelrot="0" labelx="-16" endpinid="Ground-42-Gnd" itemtype="Connector"/>
  

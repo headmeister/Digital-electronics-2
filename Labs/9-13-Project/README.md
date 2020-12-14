@@ -1,5 +1,10 @@
 # DAC převodník
 
+###
+Repo: https://github.com/headmeister/Digital-electronics-2/tree/master/Labs/9-13-Project
+
+Dokumentace se nachází v podadresáři docs
+
 ## Cíle projektu
 
 Sestavit R2R 8bitový DAC převodník ovládaný keypadem o rozměrech 4x3 tlačítek. S výstupem na display a UART.
@@ -56,7 +61,7 @@ Generování EKG signálu je zajištěno LUT, do které byly vloženy hodnoty je
 
 ## Video
 
-
+https://www.youtube.com/watch?v=HVqpJBkiR8w&feature=youtu.be
 
 ## Použité zdroje
 

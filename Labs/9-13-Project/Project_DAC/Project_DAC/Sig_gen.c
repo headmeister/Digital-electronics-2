@@ -264,11 +264,11 @@ void return_wvftype(char text[],uint8_t type)
 		break;
 		
 		case 2:
-		strncpy(text,"Ramp+",5);
+		strncpy(text,"Ramp+\0",5);
 		break;
 		
 		case 3:
-		strncpy(text,"Ramp-",6);
+		strncpy(text,"Ramp-\0",6);
 		break;
 		
 		case 4:
